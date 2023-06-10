@@ -21,6 +21,7 @@ public class MainActivity2 extends AppCompatActivity {
         View view= binding.getRoot();
         setContentView(view);
         ImageView home = binding.homeBtn;
+        ImageView cart = binding.cartBtn;
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,5 +30,13 @@ public class MainActivity2 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
+                startActivity(intent);
+            }
+        });
+        }
     }
-}
